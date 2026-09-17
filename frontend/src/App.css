@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #fcfbf9;
+  --text-main: #111111;
+  --border-color: #e2e1dd;
+  --surface: #ffffff;
+  --danger: #d44d3a;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--text-main);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+h1 { margin: 0; font-size: 24px; }
+h2 { margin: 0 0 20px 0; font-size: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;}
+
+.status-badge {
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  background: var(--border-color);
+}
+.status-badge.hostile { background: var(--danger); color: white; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover { background: #f0f0f0; }
+button.danger { color: var(--danger); border-color: var(--danger); }
+button.danger:hover { background: #fff5f4; }
+button.time-btn { background: var(--text-main); color: white; border-color: var(--text-main); }
+button.time-btn:hover { background: #333; }
+
+.memory-list { list-style: none; padding: 0; margin: 0; }
+.memory-list li {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.memory-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.memory-meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.empty { color: #666; font-style: italic; }
